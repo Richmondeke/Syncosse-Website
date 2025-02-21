@@ -7,11 +7,7 @@ import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
 import '/index.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'chat_details_overlay_model.dart';
 export 'chat_details_overlay_model.dart';
 
@@ -140,7 +136,7 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                             ),
                             TextSpan(
                               text: valueOrDefault<String>(
-                                widget!.chatRef?.groupChatId?.toString(),
+                                widget.chatRef?.groupChatId.toString(),
                                 '--',
                               ),
                               style: TextStyle(
@@ -180,7 +176,7 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                         child: Builder(
                           builder: (context) {
                             final chatUsers =
-                                widget!.chatRef?.users?.toList() ?? [];
+                                widget.chatRef?.users.toList() ?? [];
 
                             return ListView.separated(
                               padding: EdgeInsets.zero,
@@ -259,7 +255,7 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                               updateCallback: () => safeSetState(() {}),
                               updateOnChange: true,
                               child: DeleteDialogWidget(
-                                chatList: widget!.chatRef,
+                                chatList: widget.chatRef,
                                 action: () async {
                                   logFirebaseEvent(
                                       'CHAT_DETAILS_OVERLAY_Container_x9yd5l7k_');
@@ -269,12 +265,12 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                                     Chat2InviteUsersWidget.routeName,
                                     queryParameters: {
                                       'chatRef': serializeParam(
-                                        widget!.chatRef,
+                                        widget.chatRef,
                                         ParamType.Document,
                                       ),
                                     }.withoutNulls,
                                     extra: <String, dynamic>{
-                                      'chatRef': widget!.chatRef,
+                                      'chatRef': widget.chatRef,
                                       kTransitionInfoKey: TransitionInfo(
                                         hasTransition: true,
                                         transitionType:
@@ -287,7 +283,7 @@ class _ChatDetailsOverlayWidgetState extends State<ChatDetailsOverlayWidget> {
                                 deleteAction: () async {
                                   logFirebaseEvent(
                                       'CHAT_DETAILS_OVERLAY_Container_x9yd5l7k_');
-                                  await widget!.chatRef!.reference.delete();
+                                  await widget.chatRef!.reference.delete();
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(

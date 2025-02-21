@@ -9,17 +9,13 @@ import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/actions/actions.dart' as action_blocks;
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:sticky_headers/sticky_headers.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'driver_home_model.dart';
 export 'driver_home_model.dart';
@@ -1738,8 +1734,7 @@ class _DriverHomeWidgetState extends State<DriverHomeWidget>
                                                     ),
                                                   ),
                                                 ),
-                                                if ((currentUserPhoto != null &&
-                                                        currentUserPhoto !=
+                                                if ((currentUserPhoto !=
                                                             '') &&
                                                     responsiveVisibility(
                                                       context: context,
@@ -1770,8 +1765,7 @@ class _DriverHomeWidgetState extends State<DriverHomeWidget>
                                                       ),
                                                     ),
                                                   ),
-                                                if ((currentUserPhoto == null ||
-                                                        currentUserPhoto ==
+                                                if ((currentUserPhoto ==
                                                             '') &&
                                                     responsiveVisibility(
                                                       context: context,

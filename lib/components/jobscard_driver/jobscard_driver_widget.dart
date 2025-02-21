@@ -4,16 +4,10 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/index.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'jobscard_driver_model.dart';
 export 'jobscard_driver_model.dart';
 
@@ -514,7 +508,7 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                   children: [
                     Text(
                       valueOrDefault<String>(
-                        widget!.job?.jobtitle,
+                        widget.job?.jobtitle,
                         'Regional Flight Truck Driver',
                       ),
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
@@ -526,7 +520,7 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                         animationsMap['textOnPageLoadAnimation1']!),
                     Text(
                       valueOrDefault<String>(
-                        widget!.job?.companyname,
+                        widget.job?.companyname,
                         'SwiftLine Logistics',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -567,7 +561,7 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                                 Flexible(
                                   child: Text(
                                     valueOrDefault<String>(
-                                      widget!.job?.vehicletype,
+                                      widget.job?.vehicletype,
                                       'Freight Truck (Class A CDL required)',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -604,7 +598,7 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                                 Flexible(
                                   child: Text(
                                     valueOrDefault<String>(
-                                      widget!.job?.location,
+                                      widget.job?.location,
                                       'Houston Tx',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -635,7 +629,7 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                                   child: Text(
                                     valueOrDefault<String>(
                                       '\$${valueOrDefault<String>(
-                                        widget!.job?.pay?.toString(),
+                                        widget.job?.pay.toString(),
                                         '23',
                                       )}/hour',
                                       '\$28/hour',
@@ -674,7 +668,7 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                                 Flexible(
                                   child: Text(
                                     valueOrDefault<String>(
-                                      widget!.job?.contracttype,
+                                      widget.job?.contracttype,
                                       'Full-Time Ongoing',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -759,9 +753,9 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                     return Row(
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        if (!(widget!.job!.applications
+                        if (!(widget.job!.applications
                                 .contains(_model.newapplication?.reference) ||
-                            widget!.job!.applications
+                            widget.job!.applications
                                 .contains(rowApplicationsRecord?.reference)))
                           Expanded(
                             child: StreamBuilder<List<ApplicationsRecord>>(
@@ -806,22 +800,22 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                                     await applicationsRecordReference
                                         .set(createApplicationsRecordData(
                                       appliedby: currentUserReference,
-                                      jobposting: widget!.jobposting,
+                                      jobposting: widget.jobposting,
                                       status: 'Review',
-                                      jobpostedby: widget!.job?.postedby,
+                                      jobpostedby: widget.job?.postedby,
                                     ));
                                     _model.newapplication =
                                         ApplicationsRecord.getDocumentFromData(
                                             createApplicationsRecordData(
                                               appliedby: currentUserReference,
-                                              jobposting: widget!.jobposting,
+                                              jobposting: widget.jobposting,
                                               status: 'Review',
                                               jobpostedby:
-                                                  widget!.job?.postedby,
+                                                  widget.job?.postedby,
                                             ),
                                             applicationsRecordReference);
 
-                                    await widget!.jobposting!.update({
+                                    await widget.jobposting!.update({
                                       ...mapToFirestore(
                                         {
                                           'applications':
@@ -875,9 +869,9 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                               },
                             ),
                           ),
-                        if (widget!.job!.applications
+                        if (widget.job!.applications
                                 .contains(_model.newapplication?.reference) ||
-                            widget!.job!.applications
+                            widget.job!.applications
                                 .contains(rowApplicationsRecord?.reference))
                           Expanded(
                             child: StreamBuilder<List<ApplicationsRecord>>(
@@ -1018,16 +1012,16 @@ class _JobscardDriverWidgetState extends State<JobscardDriverWidget>
                             AdminInterviewsWidget.routeName,
                             queryParameters: {
                               'jobposting': serializeParam(
-                                widget!.jobposting,
+                                widget.jobposting,
                                 ParamType.DocumentReference,
                               ),
                               'jobposts': serializeParam(
-                                widget!.job,
+                                widget.job,
                                 ParamType.Document,
                               ),
                             }.withoutNulls,
                             extra: <String, dynamic>{
-                              'jobposts': widget!.job,
+                              'jobposts': widget.job,
                             },
                           );
                         },

@@ -2,11 +2,8 @@ import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'user_list_small_model.dart';
 export 'user_list_small_model.dart';
 
@@ -57,7 +54,7 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
         duration: Duration(milliseconds: 150),
         curve: Curves.easeInOut,
         decoration: BoxDecoration(
-          color: _model.iuserHovered!
+          color: _model.iuserHovered
               ? FlutterFlowTheme.of(context).primaryBackground
               : FlutterFlowTheme.of(context).secondaryBackground,
           borderRadius: BorderRadius.circular(12.0),
@@ -83,8 +80,8 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
                 ),
                 child: Builder(
                   builder: (context) {
-                    if (widget!.userRef?.photoUrl != null &&
-                        widget!.userRef?.photoUrl != '') {
+                    if (widget.userRef?.photoUrl != null &&
+                        widget.userRef?.photoUrl != '') {
                       return Padding(
                         padding: EdgeInsets.all(2.0),
                         child: ClipRRect(
@@ -92,7 +89,7 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
                           child: CachedNetworkImage(
                             fadeInDuration: Duration(milliseconds: 200),
                             fadeOutDuration: Duration(milliseconds: 200),
-                            imageUrl: widget!.userRef!.photoUrl,
+                            imageUrl: widget.userRef!.photoUrl,
                             width: 44.0,
                             height: 44.0,
                             fit: BoxFit.cover,
@@ -113,7 +110,7 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
                           alignment: AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             valueOrDefault<String>(
-                              widget!.userRef?.displayName,
+                              widget.userRef?.displayName,
                               'A',
                             ).maybeHandleOverflow(
                               maxChars: 1,
@@ -143,7 +140,7 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
                     children: [
                       Text(
                         valueOrDefault<String>(
-                          widget!.userRef?.displayName,
+                          widget.userRef?.displayName,
                           'Ghost User',
                         ),
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
@@ -158,7 +155,7 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
                             EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                         child: Text(
                           valueOrDefault<String>(
-                            widget!.userRef?.role,
+                            widget.userRef?.role,
                             '--',
                           ),
                           style:
@@ -174,7 +171,7 @@ class _UserListSmallWidgetState extends State<UserListSmallWidget> {
                   ),
                 ),
               ),
-              if (currentUserReference == widget!.userRef?.reference)
+              if (currentUserReference == widget.userRef?.reference)
                 Container(
                   height: 32.0,
                   decoration: BoxDecoration(

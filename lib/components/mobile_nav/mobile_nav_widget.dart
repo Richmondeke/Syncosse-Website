@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'mobile_nav_model.dart';
 export 'mobile_nav_model.dart';
 
@@ -80,7 +77,7 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  widget!.iconOne!,
+                  widget.iconOne!,
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                     child: Text(
@@ -103,7 +100,7 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  widget!.iconFive!,
+                  widget.iconFive!,
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                     child: Text(
@@ -126,7 +123,7 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  widget!.iconTwo!,
+                  widget.iconTwo!,
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                     child: Text(
@@ -149,7 +146,7 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  widget!.iconThree!,
+                  widget.iconThree!,
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                     child: Text(
@@ -172,7 +169,7 @@ class _MobileNavWidgetState extends State<MobileNavWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  widget!.iconFour!,
+                  widget.iconFour!,
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 8.0, 0.0, 0.0),
                     child: Text(

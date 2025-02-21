@@ -2,11 +2,7 @@ import '/backend/backend.dart';
 import '/components/modal_sections/user_details_main/user_details_main_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'user_details_model.dart';
 export 'user_details_model.dart';
 
@@ -70,10 +66,10 @@ class _UserDetailsWidgetState extends State<UserDetailsWidget> {
           model: _model.userDetailsMainModel,
           updateCallback: () => safeSetState(() {}),
           child: UserDetailsMainWidget(
-            showBack: widget!.showBack,
-            user: widget!.user,
-            jobposting: widget!.jobposting,
-            applications: widget!.applications,
+            showBack: widget.showBack,
+            user: widget.user,
+            jobposting: widget.jobposting,
+            applications: widget.applications,
           ),
         ),
       ),

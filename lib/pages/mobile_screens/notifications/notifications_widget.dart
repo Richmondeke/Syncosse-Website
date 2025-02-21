@@ -1,10 +1,7 @@
 import '/components/modal_sections/nofications_main/nofications_main_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'notifications_model.dart';
 export 'notifications_model.dart';
 
@@ -56,7 +53,7 @@ class _NotificationsWidgetState extends State<NotificationsWidget> {
           model: _model.noficationsMainModel,
           updateCallback: () => safeSetState(() {}),
           child: NoficationsMainWidget(
-            showBack: widget!.showBack,
+            showBack: widget.showBack,
           ),
         ),
       ),

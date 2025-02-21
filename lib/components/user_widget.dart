@@ -4,16 +4,11 @@ import '/components/modal_sections/modal_user/modal_user_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/index.dart';
 import 'package:aligned_dialog/aligned_dialog.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'user_model.dart';
 export 'user_model.dart';
 
@@ -60,7 +55,7 @@ class _UserWidgetState extends State<UserWidget> with TickerProviderStateMixin {
     // On component load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       logFirebaseEvent('USER_COMP_User_ON_INIT_STATE');
-      _model.user = widget!.user;
+      _model.user = widget.user;
       safeSetState(() {});
     });
 
@@ -157,7 +152,7 @@ class _UserWidgetState extends State<UserWidget> with TickerProviderStateMixin {
                             ),
                           ),
                           Text(
-                            '${widget!.parameter1}  ${widget!.parameter2}',
+                            '${widget.parameter1}  ${widget.parameter2}',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -181,7 +176,7 @@ class _UserWidgetState extends State<UserWidget> with TickerProviderStateMixin {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            '${widget!.parameter3?.toString()} year',
+                            '${widget.parameter3?.toString()} year',
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -204,7 +199,7 @@ class _UserWidgetState extends State<UserWidget> with TickerProviderStateMixin {
                           padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 0.0),
                           child: Text(
-                            widget!.parameter4!,
+                            widget.parameter4!,
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
@@ -321,7 +316,7 @@ class _UserWidgetState extends State<UserWidget> with TickerProviderStateMixin {
                     ),
                     Builder(
                       builder: (context) => StreamBuilder<UsersRecord>(
-                        stream: UsersRecord.getDocument(widget!.parameter5!),
+                        stream: UsersRecord.getDocument(widget.parameter5!),
                         builder: (context, snapshot) {
                           // Customize what your widget looks like when it's loading.
                           if (!snapshot.hasData) {
@@ -357,16 +352,16 @@ class _UserWidgetState extends State<UserWidget> with TickerProviderStateMixin {
                                       ParamType.bool,
                                     ),
                                     'user': serializeParam(
-                                      widget!.user,
+                                      widget.user,
                                       ParamType.Document,
                                     ),
                                     'userref': serializeParam(
-                                      widget!.parameter5,
+                                      widget.parameter5,
                                       ParamType.DocumentReference,
                                     ),
                                   }.withoutNulls,
                                   extra: <String, dynamic>{
-                                    'user': widget!.user,
+                                    'user': widget.user,
                                   },
                                 );
                               } else {
@@ -386,7 +381,7 @@ class _UserWidgetState extends State<UserWidget> with TickerProviderStateMixin {
                                             MediaQuery.sizeOf(context).width *
                                                 1.0,
                                         child: ModalUserWidget(
-                                          user: widget!.user,
+                                          user: widget.user,
                                         ),
                                       ),
                                     );

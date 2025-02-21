@@ -3,14 +3,9 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'jobscard_admin_model.dart';
 export 'jobscard_admin_model.dart';
 
@@ -449,7 +444,7 @@ class _JobscardAdminWidgetState extends State<JobscardAdminWidget>
                   children: [
                     Text(
                       valueOrDefault<String>(
-                        widget!.jobposting?.jobtitle,
+                        widget.jobposting?.jobtitle,
                         'Regional Flight Truck Driver',
                       ),
                       style: FlutterFlowTheme.of(context).bodyLarge.override(
@@ -501,7 +496,7 @@ class _JobscardAdminWidgetState extends State<JobscardAdminWidget>
                                 Flexible(
                                   child: Text(
                                     valueOrDefault<String>(
-                                      widget!.jobposting?.vehicletype,
+                                      widget.jobposting?.vehicletype,
                                       'Freight Truck (Class A CDL required)',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -538,7 +533,7 @@ class _JobscardAdminWidgetState extends State<JobscardAdminWidget>
                                 Flexible(
                                   child: Text(
                                     valueOrDefault<String>(
-                                      widget!.jobposting?.location,
+                                      widget.jobposting?.location,
                                       'Houston, TX',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -569,7 +564,7 @@ class _JobscardAdminWidgetState extends State<JobscardAdminWidget>
                                   child: Text(
                                     '${valueOrDefault<String>(
                                       formatNumber(
-                                        widget!.jobposting?.pay,
+                                        widget.jobposting?.pay,
                                         formatType: FormatType.decimal,
                                         decimalType: DecimalType.automatic,
                                         currency: '\$',
@@ -610,7 +605,7 @@ class _JobscardAdminWidgetState extends State<JobscardAdminWidget>
                                 Flexible(
                                   child: Text(
                                     valueOrDefault<String>(
-                                      widget!.jobposting?.contracttype,
+                                      widget.jobposting?.contracttype,
                                       'Full-Time Ongoing',
                                     ),
                                     style: FlutterFlowTheme.of(context)
@@ -641,7 +636,7 @@ class _JobscardAdminWidgetState extends State<JobscardAdminWidget>
                           Flexible(
                             child: Text(
                               valueOrDefault<String>(
-                                widget!.jobposting?.duration,
+                                widget.jobposting?.duration,
                                 'Monday to Friday: 8AM to 6PM',
                               ),
                               style: FlutterFlowTheme.of(context)
@@ -674,7 +669,7 @@ class _JobscardAdminWidgetState extends State<JobscardAdminWidget>
                         AdminInterviewsWidget.routeName,
                         queryParameters: {
                           'jobposting': serializeParam(
-                            widget!.jobposting?.reference,
+                            widget.jobposting?.reference,
                             ParamType.DocumentReference,
                           ),
                         }.withoutNulls,

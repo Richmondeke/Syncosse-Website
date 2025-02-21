@@ -3,10 +3,7 @@ import '/components/modal_sections/schedulemodal/schedulemodal_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'interviews_model.dart';
 export 'interviews_model.dart';
 
@@ -89,9 +86,9 @@ class _InterviewsWidgetState extends State<InterviewsWidget> {
             model: _model.schedulemodalModel,
             updateCallback: () => safeSetState(() {}),
             child: SchedulemodalWidget(
-              driverprofile: widget!.user,
-              jobPosting: widget!.jobPosting,
-              driverapplication: widget!.applicstions,
+              driverprofile: widget.user,
+              jobPosting: widget.jobPosting,
+              driverapplication: widget.applicstions,
             ),
           ),
         ),

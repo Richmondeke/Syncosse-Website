@@ -3,11 +3,8 @@ import '/components/main_logo_small/main_logo_small_widget.dart';
 import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'driver_webnav_model.dart';
 export 'driver_webnav_model.dart';
 
@@ -138,7 +135,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: widget!.selectedNav == 1
+                              color: widget.selectedNav == 1
                                   ? FlutterFlowTheme.of(context).accent1
                                   : FlutterFlowTheme.of(context)
                                       .secondaryBackground,
@@ -152,7 +149,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                                 children: [
                                   Icon(
                                     FFIcons.khomeLineHouse,
-                                    color: widget!.selectedNav == 1
+                                    color: widget.selectedNav == 1
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .secondaryText,
@@ -205,7 +202,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: widget!.selectedNav == 2
+                              color: widget.selectedNav == 2
                                   ? FlutterFlowTheme.of(context).accent1
                                   : FlutterFlowTheme.of(context)
                                       .secondaryBackground,
@@ -219,7 +216,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                                 children: [
                                   Icon(
                                     Icons.content_paste_sharp,
-                                    color: widget!.selectedNav == 2
+                                    color: widget.selectedNav == 2
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .secondaryText,
@@ -272,7 +269,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: widget!.selectedNav == 3
+                              color: widget.selectedNav == 3
                                   ? FlutterFlowTheme.of(context).accent1
                                   : FlutterFlowTheme.of(context)
                                       .secondaryBackground,
@@ -286,7 +283,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                                 children: [
                                   Icon(
                                     FFIcons.kemailEnvelope,
-                                    color: widget!.selectedNav == 3
+                                    color: widget.selectedNav == 3
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .secondaryText,
@@ -339,7 +336,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: widget!.selectedNav == 4
+                              color: widget.selectedNav == 4
                                   ? FlutterFlowTheme.of(context).accent1
                                   : FlutterFlowTheme.of(context)
                                       .secondaryBackground,
@@ -353,7 +350,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                                 children: [
                                   Icon(
                                     Icons.forum_outlined,
-                                    color: widget!.selectedNav == 4
+                                    color: widget.selectedNav == 4
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .secondaryText,
@@ -406,7 +403,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                           child: Container(
                             width: double.infinity,
                             decoration: BoxDecoration(
-                              color: widget!.selectedNav == 5
+                              color: widget.selectedNav == 5
                                   ? FlutterFlowTheme.of(context).accent1
                                   : FlutterFlowTheme.of(context)
                                       .secondaryBackground,
@@ -420,7 +417,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                                 children: [
                                   Icon(
                                     Icons.face_sharp,
-                                    color: widget!.selectedNav == 5
+                                    color: widget.selectedNav == 5
                                         ? FlutterFlowTheme.of(context).primary
                                         : FlutterFlowTheme.of(context)
                                             .secondaryText,
@@ -476,7 +473,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                       Container(
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: widget!.selectedNav == 6
+                          color: widget.selectedNav == 6
                               ? FlutterFlowTheme.of(context).alternate
                               : FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -490,7 +487,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                             children: [
                               Icon(
                                 Icons.headset_mic_outlined,
-                                color: widget!.selectedNav == 1
+                                color: widget.selectedNav == 1
                                     ? FlutterFlowTheme.of(context).primary
                                     : FlutterFlowTheme.of(context)
                                         .secondaryText,
@@ -537,7 +534,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                         child: Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: widget!.selectedNav == 7
+                            color: widget.selectedNav == 7
                                 ? FlutterFlowTheme.of(context).alternate
                                 : FlutterFlowTheme.of(context)
                                     .secondaryBackground,
@@ -551,7 +548,7 @@ class _DriverWebnavWidgetState extends State<DriverWebnavWidget> {
                               children: [
                                 Icon(
                                   Icons.logout_sharp,
-                                  color: widget!.selectedNav == 2
+                                  color: widget.selectedNav == 2
                                       ? FlutterFlowTheme.of(context).primary
                                       : FlutterFlowTheme.of(context)
                                           .secondaryText,

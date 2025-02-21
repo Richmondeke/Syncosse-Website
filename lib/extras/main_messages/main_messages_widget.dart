@@ -6,17 +6,11 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/actions/actions.dart' as action_blocks;
 import '/index.dart';
 import 'package:auto_size_text/auto_size_text.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'main_messages_model.dart';
 export 'main_messages_model.dart';
 
@@ -356,8 +350,7 @@ class _MainMessagesWidgetState extends State<MainMessagesWidget>
                                           ),
                                         ),
                                       ),
-                                      if (currentUserPhoto != null &&
-                                          currentUserPhoto != '')
+                                      if (currentUserPhoto != '')
                                         Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -377,8 +370,7 @@ class _MainMessagesWidgetState extends State<MainMessagesWidget>
                                             ),
                                           ),
                                         ),
-                                      if (currentUserPhoto == null ||
-                                          currentUserPhoto == '')
+                                      if (currentUserPhoto == '')
                                         Expanded(
                                           child: AuthUserStreamWidget(
                                             builder: (context) => Stack(
@@ -701,8 +693,7 @@ class _MainMessagesWidgetState extends State<MainMessagesWidget>
                                                                                     useGoogleFonts: false,
                                                                                   ),
                                                                             ),
-                                                                            if (currentUserPhoto == null ||
-                                                                                currentUserPhoto == '')
+                                                                            if (currentUserPhoto == '')
                                                                               AuthUserStreamWidget(
                                                                                 builder: (context) => Stack(
                                                                                   alignment: AlignmentDirectional(0.0, 0.0),

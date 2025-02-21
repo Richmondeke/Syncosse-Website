@@ -4,14 +4,9 @@ import '/components/username/username_widget.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'user_details_main_model.dart';
 export 'user_details_main_model.dart';
 
@@ -289,7 +284,7 @@ class _UserDetailsMainWidgetState extends State<UserDetailsMainWidget>
                         model: _model.usernameModel,
                         updateCallback: () => safeSetState(() {}),
                         child: UsernameWidget(
-                          user: widget!.user,
+                          user: widget.user,
                         ),
                       ),
                     ),
@@ -366,17 +361,17 @@ class _UserDetailsMainWidgetState extends State<UserDetailsMainWidget>
                                             InterviewsWidget.routeName,
                                             queryParameters: {
                                               'user': serializeParam(
-                                                widget!.user,
+                                                widget.user,
                                                 ParamType.Document,
                                               ),
                                               'jobPosting': serializeParam(
-                                                widget!.jobposting,
+                                                widget.jobposting,
                                                 ParamType.Document,
                                               ),
                                             }.withoutNulls,
                                             extra: <String, dynamic>{
-                                              'user': widget!.user,
-                                              'jobPosting': widget!.jobposting,
+                                              'user': widget.user,
+                                              'jobPosting': widget.jobposting,
                                             },
                                           );
                                         } else {
@@ -398,8 +393,8 @@ class _UserDetailsMainWidgetState extends State<UserDetailsMainWidget>
                                                               .width *
                                                           1.0,
                                                   child: SchedulePopWidget(
-                                                    user: widget!.user,
-                                                    job: widget!.jobposting,
+                                                    user: widget.user,
+                                                    job: widget.jobposting,
                                                   ),
                                                 ),
                                               );
@@ -469,7 +464,7 @@ class _UserDetailsMainWidgetState extends State<UserDetailsMainWidget>
                               children: [
                                 Text(
                                   valueOrDefault<String>(
-                                    widget!.user?.bio,
+                                    widget.user?.bio,
                                     'Tobi is the best driver in Paris',
                                   ),
                                   style: FlutterFlowTheme.of(context)

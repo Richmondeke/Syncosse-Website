@@ -10,8 +10,6 @@ import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/actions/actions.dart' as action_blocks;
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
@@ -20,7 +18,6 @@ import 'package:aligned_dialog/aligned_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'admin_home_model.dart';
 export 'admin_home_model.dart';
@@ -1975,8 +1972,6 @@ class _AdminHomeWidgetState extends State<AdminHomeWidget>
                                                     ),
                                                   ),
                                                   if ((currentUserPhoto !=
-                                                              null &&
-                                                          currentUserPhoto !=
                                                               '') &&
                                                       responsiveVisibility(
                                                         context: context,
@@ -2011,9 +2006,7 @@ class _AdminHomeWidgetState extends State<AdminHomeWidget>
                                                         ),
                                                       ),
                                                     ),
-                                                  if (currentUserPhoto ==
-                                                          null ||
-                                                      currentUserPhoto == '')
+                                                  if (currentUserPhoto == '')
                                                     Expanded(
                                                       child:
                                                           AuthUserStreamWidget(

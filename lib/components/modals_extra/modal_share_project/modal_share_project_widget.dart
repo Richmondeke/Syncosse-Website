@@ -3,13 +3,8 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'modal_share_project_model.dart';
 export 'modal_share_project_model.dart';
 
@@ -205,7 +200,7 @@ class _ModalShareProjectWidgetState extends State<ModalShareProjectWidget>
                                             curve: Curves.easeInOut,
                                             width: double.infinity,
                                             decoration: BoxDecoration(
-                                              color: _model.iuserHovered1!
+                                              color: _model.iuserHovered1
                                                   ? FlutterFlowTheme.of(context)
                                                       .primaryBackground
                                                   : FlutterFlowTheme.of(context)
@@ -327,7 +322,7 @@ class _ModalShareProjectWidgetState extends State<ModalShareProjectWidget>
                                             curve: Curves.easeInOut,
                                             width: double.infinity,
                                             decoration: BoxDecoration(
-                                              color: _model.iuserHovered2!
+                                              color: _model.iuserHovered2
                                                   ? FlutterFlowTheme.of(context)
                                                       .primaryBackground
                                                   : FlutterFlowTheme.of(context)
@@ -449,7 +444,7 @@ class _ModalShareProjectWidgetState extends State<ModalShareProjectWidget>
                                             curve: Curves.easeInOut,
                                             width: double.infinity,
                                             decoration: BoxDecoration(
-                                              color: _model.iuserHovered3!
+                                              color: _model.iuserHovered3
                                                   ? FlutterFlowTheme.of(context)
                                                       .primaryBackground
                                                   : FlutterFlowTheme.of(context)
@@ -577,7 +572,7 @@ class _ModalShareProjectWidgetState extends State<ModalShareProjectWidget>
                                         curve: Curves.easeInOut,
                                         width: double.infinity,
                                         decoration: BoxDecoration(
-                                          color: _model.mouseRegionHovered!
+                                          color: _model.mouseRegionHovered
                                               ? FlutterFlowTheme.of(context)
                                                   .primaryBackground
                                               : FlutterFlowTheme.of(context)

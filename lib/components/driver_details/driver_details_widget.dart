@@ -1,11 +1,8 @@
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'driver_details_model.dart';
 export 'driver_details_model.dart';
 
@@ -71,7 +68,7 @@ class _DriverDetailsWidgetState extends State<DriverDetailsWidget> {
                   fadeInDuration: Duration(milliseconds: 500),
                   fadeOutDuration: Duration(milliseconds: 500),
                   imageUrl: valueOrDefault<String>(
-                    widget!.user?.photoUrl,
+                    widget.user?.photoUrl,
                     'https://images.unsplash.com/photo-1624561172888-ac93c696e10c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjJ8fHVzZXJzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
                   ),
                   width: 44.0,
@@ -90,10 +87,10 @@ class _DriverDetailsWidgetState extends State<DriverDetailsWidget> {
                 children: [
                   Text(
                     '${valueOrDefault<String>(
-                      widget!.user?.firstname,
+                      widget.user?.firstname,
                       'Barbara',
                     )} ${valueOrDefault<String>(
-                      widget!.user?.surname,
+                      widget.user?.surname,
                       'Okoro',
                     )}',
                     style: FlutterFlowTheme.of(context).bodyLarge.override(
@@ -106,7 +103,7 @@ class _DriverDetailsWidgetState extends State<DriverDetailsWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0.0, 4.0, 0.0, 0.0),
                     child: Text(
                       valueOrDefault<String>(
-                        widget!.user?.email,
+                        widget.user?.email,
                         'barbara@syncosse.co',
                       ),
                       style: FlutterFlowTheme.of(context).labelSmall.override(

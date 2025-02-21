@@ -3,13 +3,9 @@ import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'delete_dialog_model.dart';
 export 'delete_dialog_model.dart';
 
@@ -139,7 +135,7 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
                       curve: Curves.easeInOut,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: _model.mouseRegionHovered1!
+                        color: _model.mouseRegionHovered1
                             ? FlutterFlowTheme.of(context).primaryBackground
                             : FlutterFlowTheme.of(context).secondaryBackground,
                       ),
@@ -188,12 +184,12 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
                     safeSetState(() => _model.mouseRegionHovered1 = false);
                   }),
                 ),
-                if (widget!.chatList?.userA == currentUserReference)
+                if (widget.chatList?.userA == currentUserReference)
                   Divider(
                     thickness: 1.0,
                     color: FlutterFlowTheme.of(context).alternate,
                   ),
-                if (widget!.chatList?.userA == currentUserReference)
+                if (widget.chatList?.userA == currentUserReference)
                   MouseRegion(
                     opaque: false,
                     cursor: MouseCursor.defer ?? MouseCursor.defer,
@@ -212,7 +208,7 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
                         curve: Curves.easeInOut,
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: _model.mouseRegionHovered2!
+                          color: _model.mouseRegionHovered2
                               ? FlutterFlowTheme.of(context).primaryBackground
                               : FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -278,7 +274,7 @@ class _DeleteDialogWidgetState extends State<DeleteDialogWidget>
                       curve: Curves.easeInOut,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: _model.mouseRegionHovered3!
+                        color: _model.mouseRegionHovered3
                             ? FlutterFlowTheme.of(context).primaryBackground
                             : FlutterFlowTheme.of(context).secondaryBackground,
                       ),

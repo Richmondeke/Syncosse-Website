@@ -10,8 +10,6 @@ import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/actions/actions.dart' as action_blocks;
 import '/index.dart';
 import 'package:sticky_headers/sticky_headers.dart';
@@ -20,7 +18,6 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:text_search/text_search.dart';
 import 'admin_driver_manager_model.dart';
@@ -1724,8 +1721,6 @@ class _AdminDriverManagerWidgetState extends State<AdminDriverManagerWidget>
                                                                 ),
                                                               ),
                                                               if ((currentUserPhoto !=
-                                                                          null &&
-                                                                      currentUserPhoto !=
                                                                           '') &&
                                                                   responsiveVisibility(
                                                                     context:
@@ -1768,8 +1763,6 @@ class _AdminDriverManagerWidgetState extends State<AdminDriverManagerWidget>
                                                                   ),
                                                                 ),
                                                               if (currentUserPhoto ==
-                                                                      null ||
-                                                                  currentUserPhoto ==
                                                                       '')
                                                                 Expanded(
                                                                   child:
@@ -1941,17 +1934,17 @@ class _AdminDriverManagerWidgetState extends State<AdminDriverManagerWidget>
                                                                             record,
                                                                             [
                                                                       record
-                                                                          .status!,
+                                                                          .status,
                                                                       record
-                                                                          .permittype!,
+                                                                          .permittype,
                                                                       record
-                                                                          .firstname!,
+                                                                          .firstname,
                                                                       record
-                                                                          .countryofissuance!,
+                                                                          .countryofissuance,
                                                                       record
-                                                                          .title!,
+                                                                          .title,
                                                                       record
-                                                                          .role!
+                                                                          .role
                                                                     ]),
                                                               )
                                                               .toList(),
@@ -2067,12 +2060,12 @@ class _AdminDriverManagerWidgetState extends State<AdminDriverManagerWidget>
                                                                         (record) => TextSearchItem.fromTerms(
                                                                             record,
                                                                             [
-                                                                              record.status!,
-                                                                              record.permittype!,
-                                                                              record.firstname!,
-                                                                              record.countryofissuance!,
-                                                                              record.title!,
-                                                                              record.role!
+                                                                              record.status,
+                                                                              record.permittype,
+                                                                              record.firstname,
+                                                                              record.countryofissuance,
+                                                                              record.title,
+                                                                              record.role
                                                                             ]),
                                                                       )
                                                                       .toList(),

@@ -2,11 +2,7 @@ import '/backend/backend.dart';
 import '/components/modal_sections/job_details/job_details_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'job_details2_model.dart';
 export 'job_details2_model.dart';
 
@@ -71,9 +67,9 @@ class _JobDetails2WidgetState extends State<JobDetails2Widget> {
           updateCallback: () => safeSetState(() {}),
           child: JobDetailsWidget(
             showBack: false,
-            user: widget!.user,
-            jobposting: widget!.jobposting,
-            applications: widget!.applications,
+            user: widget.user,
+            jobposting: widget.jobposting,
+            applications: widget.applications,
           ),
         ),
       ),

@@ -1,16 +1,11 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/components/main_logo_small/main_logo_small_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:async';
-import 'dart:ui';
 import '/index.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'create_job1_copy_model.dart';
 export 'create_job1_copy_model.dart';
 
@@ -282,7 +277,7 @@ class _CreateJob1CopyWidgetState extends State<CreateJob1CopyWidget> {
                                           'CREATE_JOB1_COPY_PAGE_PROCEED_BTN_ON_TAP');
                                       unawaited(
                                         () async {
-                                          await widget!.job!.reference.update(
+                                          await widget.job!.reference.update(
                                               createJobPostingRecordData(
                                             jobtitle: _model
                                                 .firstnameTextController.text,

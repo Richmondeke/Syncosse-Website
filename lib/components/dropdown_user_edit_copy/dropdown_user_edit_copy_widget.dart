@@ -1,10 +1,7 @@
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'dropdown_user_edit_copy_model.dart';
 export 'dropdown_user_edit_copy_model.dart';
 
@@ -103,7 +100,7 @@ class _DropdownUserEditCopyWidgetState
                         curve: Curves.easeInOut,
                         width: double.infinity,
                         decoration: BoxDecoration(
-                          color: _model.mouseRegionHovered1!
+                          color: _model.mouseRegionHovered1
                               ? FlutterFlowTheme.of(context).primaryBackground
                               : FlutterFlowTheme.of(context)
                                   .secondaryBackground,
@@ -162,7 +159,7 @@ class _DropdownUserEditCopyWidgetState
                       curve: Curves.easeInOut,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: _model.mouseRegionHovered2!
+                        color: _model.mouseRegionHovered2
                             ? FlutterFlowTheme.of(context).primaryBackground
                             : FlutterFlowTheme.of(context).secondaryBackground,
                       ),
@@ -218,7 +215,7 @@ class _DropdownUserEditCopyWidgetState
                       curve: Curves.easeInOut,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: _model.mouseRegionHovered3!
+                        color: _model.mouseRegionHovered3
                             ? FlutterFlowTheme.of(context).primaryBackground
                             : FlutterFlowTheme.of(context).secondaryBackground,
                       ),
@@ -278,7 +275,7 @@ class _DropdownUserEditCopyWidgetState
                       curve: Curves.easeInOut,
                       width: double.infinity,
                       decoration: BoxDecoration(
-                        color: _model.mouseRegionHovered4!
+                        color: _model.mouseRegionHovered4
                             ? FlutterFlowTheme.of(context).primaryBackground
                             : FlutterFlowTheme.of(context).secondaryBackground,
                         borderRadius: BorderRadius.only(

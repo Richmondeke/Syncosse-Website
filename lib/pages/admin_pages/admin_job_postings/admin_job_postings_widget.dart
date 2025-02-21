@@ -10,15 +10,12 @@ import '/flutter_flow/flutter_flow_language_selector.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
 import '/actions/actions.dart' as action_blocks;
 import '/flutter_flow/custom_functions.dart' as functions;
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'admin_job_postings_model.dart';
 export 'admin_job_postings_model.dart';
@@ -1420,8 +1417,7 @@ class _AdminJobPostingsWidgetState extends State<AdminJobPostingsWidget>
                                             ),
                                           ),
                                         ),
-                                        if ((currentUserPhoto != null &&
-                                                currentUserPhoto != '') &&
+                                        if ((currentUserPhoto != '') &&
                                             responsiveVisibility(
                                               context: context,
                                               phone: false,
@@ -1446,8 +1442,7 @@ class _AdminJobPostingsWidgetState extends State<AdminJobPostingsWidget>
                                               ),
                                             ),
                                           ),
-                                        if (currentUserPhoto == null ||
-                                            currentUserPhoto == '')
+                                        if (currentUserPhoto == '')
                                           Expanded(
                                             child: AuthUserStreamWidget(
                                               builder: (context) => Stack(

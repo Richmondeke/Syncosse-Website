@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_drop_down.dart';
@@ -6,15 +5,8 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'dart:math';
-import 'dart:ui';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'schedulemodal_model.dart';
 export 'schedulemodal_model.dart';
 
@@ -295,7 +287,7 @@ class _SchedulemodalWidgetState extends State<SchedulemodalWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 0.0, 0.0, 0.0),
                                       child: Text(
-                                        '${widget!.driverprofile?.firstname} ${widget!.driverprofile?.surname}',
+                                        '${widget.driverprofile?.firstname} ${widget.driverprofile?.surname}',
                                         style: FlutterFlowTheme.of(context)
                                             .bodyLarge
                                             .override(
@@ -310,7 +302,7 @@ class _SchedulemodalWidgetState extends State<SchedulemodalWidget>
                                           12.0, 4.0, 0.0, 0.0),
                                       child: Text(
                                         valueOrDefault<String>(
-                                          widget!.driverprofile?.city,
+                                          widget.driverprofile?.city,
                                           'Houston, TX',
                                         ),
                                         style: FlutterFlowTheme.of(context)
@@ -326,7 +318,7 @@ class _SchedulemodalWidgetState extends State<SchedulemodalWidget>
                                       padding: EdgeInsetsDirectional.fromSTEB(
                                           12.0, 4.0, 0.0, 0.0),
                                       child: Text(
-                                        '${widget!.driverprofile?.experience?.toString()} Years of Experience',
+                                        '${widget.driverprofile?.experience.toString()} Years of Experience',
                                         style: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
@@ -1052,7 +1044,7 @@ class _SchedulemodalWidgetState extends State<SchedulemodalWidget>
                           logFirebaseEvent(
                               'SCHEDULEMODAL_SCHEDULE_INTERVIEW_BTN_ON_');
 
-                          await widget!.driverapplication!.reference
+                          await widget.driverapplication!.reference
                               .update(createApplicationsRecordData(
                             interviewDate: _model.datePicked1,
                             status: 'Interview',

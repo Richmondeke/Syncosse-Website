@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'empty_state_simple_model.dart';
 export 'empty_state_simple_model.dart';
 
@@ -56,11 +53,11 @@ class _EmptyStateSimpleWidgetState extends State<EmptyStateSimpleWidget> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          widget!.icon!,
+          widget.icon!,
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
             child: Text(
-              widget!.title,
+              widget.title,
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).headlineSmall.override(
                     fontFamily: 'Aeonik',
@@ -74,7 +71,7 @@ class _EmptyStateSimpleWidgetState extends State<EmptyStateSimpleWidget> {
           Padding(
             padding: EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 16.0, 0.0),
             child: Text(
-              widget!.body,
+              widget.body,
               textAlign: TextAlign.center,
               style: FlutterFlowTheme.of(context).labelMedium.override(
                     fontFamily: 'Aeonik',

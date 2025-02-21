@@ -5,14 +5,10 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
-import 'package:provider/provider.dart';
 import 'chat2_invite_users_model.dart';
 export 'chat2_invite_users_model.dart';
 
@@ -46,10 +42,10 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
       logFirebaseEvent('CHAT_2_INVITE_USERS_chat_2_InviteUsers_O');
-      if (widget!.chatRef != null) {
+      if (widget.chatRef != null) {
         // addChatUsers_ToList
         _model.friendsList =
-            widget!.chatRef!.users.toList().cast<DocumentReference>();
+            widget.chatRef!.users.toList().cast<DocumentReference>();
         safeSetState(() {});
       } else {
         // addUser_ToList
@@ -454,7 +450,7 @@ class _Chat2InviteUsersWidgetState extends State<Chat2InviteUsersWidget> {
                       _model.addToFriendsList(currentUserReference!);
                       safeSetState(() {});
                     },
-                    text: widget!.chatRef != null
+                    text: widget.chatRef != null
                         ? 'Add to Chat'
                         : 'Send Invites',
                     options: FFButtonOptions(

@@ -1,16 +1,9 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/backend/backend.dart';
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'dart:math';
-import 'dart:ui';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'interviewstatus_model.dart';
 export 'interviewstatus_model.dart';
 
@@ -137,7 +130,7 @@ class _InterviewstatusWidgetState extends State<InterviewstatusWidget>
                               _model.selectedoption = 'Review';
                               safeSetState(() {});
 
-                              await widget!.application!.reference
+                              await widget.application!.reference
                                   .update(createApplicationsRecordData(
                                 status: 'Review',
                               ));
@@ -209,7 +202,7 @@ class _InterviewstatusWidgetState extends State<InterviewstatusWidget>
                               _model.selectedoption = 'Interview';
                               safeSetState(() {});
 
-                              await widget!.application!.reference
+                              await widget.application!.reference
                                   .update(createApplicationsRecordData(
                                 status: 'Interview',
                               ));
@@ -282,7 +275,7 @@ class _InterviewstatusWidgetState extends State<InterviewstatusWidget>
                               _model.selectedoption = 'Offer';
                               safeSetState(() {});
 
-                              await widget!.application!.reference
+                              await widget.application!.reference
                                   .update(createApplicationsRecordData(
                                 status: 'Offer',
                               ));
@@ -355,7 +348,7 @@ class _InterviewstatusWidgetState extends State<InterviewstatusWidget>
                               _model.selectedoption = 'Hired';
                               safeSetState(() {});
 
-                              await widget!.application!.reference
+                              await widget.application!.reference
                                   .update(createApplicationsRecordData(
                                 status: 'Hired',
                               ));
@@ -428,7 +421,7 @@ class _InterviewstatusWidgetState extends State<InterviewstatusWidget>
                               _model.selectedoption = 'Rejected';
                               safeSetState(() {});
 
-                              await widget!.application!.reference
+                              await widget.application!.reference
                                   .update(createApplicationsRecordData(
                                 status: 'Rejected',
                               ));

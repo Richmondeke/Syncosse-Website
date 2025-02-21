@@ -3,17 +3,10 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:math';
-import 'dart:ui';
-import '/index.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'image_details_model.dart';
 export 'image_details_model.dart';
 
@@ -155,14 +148,14 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                 child: Padding(
                   padding: EdgeInsets.all(12.0),
                   child: Hero(
-                    tag: widget!.chatMessage!.image,
+                    tag: widget.chatMessage!.image,
                     transitionOnUserGestures: true,
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(8.0),
                       child: CachedNetworkImage(
                         fadeInDuration: Duration(milliseconds: 500),
                         fadeOutDuration: Duration(milliseconds: 500),
-                        imageUrl: widget!.chatMessage!.image,
+                        imageUrl: widget.chatMessage!.image,
                         width: double.infinity,
                         fit: BoxFit.fitWidth,
                         memCacheWidth: 1200,
@@ -177,9 +170,9 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                 padding: EdgeInsetsDirectional.fromSTEB(12.0, 12.0, 12.0, 32.0),
                 child: FutureBuilder<UsersRecord>(
                   future: FFAppState().userDocQuery(
-                    uniqueQueryKey: widget!.chatMessage?.reference.id,
+                    uniqueQueryKey: widget.chatMessage?.reference.id,
                     requestFn: () =>
-                        UsersRecord.getDocumentOnce(widget!.chatMessage!.user!),
+                        UsersRecord.getDocumentOnce(widget.chatMessage!.user!),
                   ),
                   builder: (context, snapshot) {
                     // Customize what your widget looks like when it's loading.
@@ -265,7 +258,7 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                                       child: Text(
                                         dateTimeFormat(
                                           "relative",
-                                          widget!.chatMessage!.timestamp!,
+                                          widget.chatMessage!.timestamp!,
                                           locale: FFLocalizations.of(context)
                                                   .languageShortCode ??
                                               FFLocalizations.of(context)
@@ -288,7 +281,7 @@ class _ImageDetailsWidgetState extends State<ImageDetailsWidget>
                                   child: SelectionArea(
                                       child: AutoSizeText(
                                     valueOrDefault<String>(
-                                      widget!.chatMessage?.text,
+                                      widget.chatMessage?.text,
                                       '--',
                                     ),
                                     textAlign: TextAlign.start,

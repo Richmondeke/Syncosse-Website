@@ -4,13 +4,9 @@ import '/chat_groupwbubbles/empty_state_simple/empty_state_simple_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
-import 'dart:ui';
 import '/index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'chat2_main_model.dart';
 export 'chat2_main_model.dart';
 
@@ -614,8 +610,6 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                                   builder:
                                                                       (context) {
                                                                     if (containerUsersRecord.photoUrl !=
-                                                                            null &&
-                                                                        containerUsersRecord.photoUrl !=
                                                                             '') {
                                                                       return Padding(
                                                                         padding:
@@ -720,9 +714,6 @@ class _Chat2MainWidgetState extends State<Chat2MainWidget> {
                                                               builder:
                                                                   (context) {
                                                                 if (rowUsersRecord
-                                                                            .photoUrl !=
-                                                                        null &&
-                                                                    rowUsersRecord
                                                                             .photoUrl !=
                                                                         '') {
                                                                   return Padding(
